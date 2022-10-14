@@ -1,12 +1,14 @@
-<table>
+<table class="table">
   <thead>
-    <th>Name</th>
-    <th>First Name</th>
-    <th>Last Name</th>
-    <th>Place</th>
+    <th scope="col">#</th>
+    <th scope="col">Name</th>
+    <th scope="col">First Name</th>
+    <th scope="col">Last Name</th>
+    <th scope="col">Place</th>
   </thead>
   <tbody>
     <tr *ngFor="let hero of heroes">
+      <th scope="row">{{ hero.id }}</th>
       <td>{{ hero.name }}</td>
       <td>{{ hero.firstName }}</td>
       <td>{{ hero.lastName }}</td>
