@@ -21,5 +21,5 @@
   </form>
   <button (click)="updateHero(hero)" *ngIf="hero.id" type="button" class="btn btn-primary m-1" >Update</button>
   <button (click)="deleteHero(hero)" *ngIf="hero.id" type="button" class="btn btn-danger m-1">Delete</button>
-  <button (click)="createHero(hero)" *ngIf="hero.id" type="button" class="btn btn-success m-1">Create</button>
+  <button (click)="createHero(hero)" *ngIf="!hero.id" type="button" class="btn btn-success m-1">Create</button>
 </div>
