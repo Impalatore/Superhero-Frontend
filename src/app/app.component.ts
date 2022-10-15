@@ -10,6 +10,7 @@ import {SuperHeroService} from "./services/super-hero.service";
 export class AppComponent {
   title = 'Angular-CRUD';
   heroes: SuperHero[] = [];
+  heroToEdit?: SuperHero;
 
   constructor(private superHeroService: SuperHeroService) {}
 
@@ -17,5 +18,13 @@ export class AppComponent {
     this.superHeroService
       .getSuperHeroes()
       .subscribe((result: SuperHero[]) => (this.heroes = result));
+  }
+
+  editHero(hero: SuperHero) {
+    this.heroToEdit = hero;
+  }
+
+  initNewHero() {
+    this.heroToEdit = new SuperHero();
   }
 }

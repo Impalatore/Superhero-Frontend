@@ -1,1 +1,25 @@
-<p>edit-hero works!</p>
+<h1>Edit Hero Form</h1>
+<div *ngIf="hero">
+  <h2>{{ hero.name }}</h2>
+  <form>
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input [(ngModel)]="hero.name" type="text" id="name" name="name" placeholder="Name" class="form-control" required />
+    </div>
+    <div class="form-group">
+      <label for="firstName">First Name</label>
+      <input [(ngModel)]="hero.firstName" type="text" id="firstName" name="firstName" placeholder="First Name" class="form-control" required />
+    </div>
+    <div class="form-group">
+      <label for="lastName">Last Name</label>
+      <input [(ngModel)]="hero.lastName" type="text" id="lastName" name="lastName" placeholder="Last Name" class="form-control" required />
+    </div>
+    <div class="form-group">
+      <label for="place">Place</label>
+      <input [(ngModel)]="hero.place" type="text" id="place" name="place" placeholder="Place" class="form-control" required />
+    </div>
+  </form>
+  <button (click)="updateHero(hero)" *ngIf="hero.id" type="button" class="btn btn-primary m-1" >Update</button>
+  <button (click)="deleteHero(hero)" *ngIf="hero.id" type="button" class="btn btn-danger m-1">Delete</button>
+  <button (click)="createHero(hero)" *ngIf="hero.id" type="button" class="btn btn-success m-1">Create</button>
+</div>

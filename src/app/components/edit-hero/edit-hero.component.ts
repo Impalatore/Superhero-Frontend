@@ -14,4 +14,15 @@ export class EditHeroComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  updateHero(hero: SuperHero) {
+
+  }
+
+  deleteHero(hero: SuperHero) {
+
+  }
+
+  createHero(hero: SuperHero) {
+
+  }
 }

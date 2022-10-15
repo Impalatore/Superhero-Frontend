@@ -1,3 +1,4 @@
+<button (click)="initNewHero()" class="btn btn-primary" type="button">Add New Hero</button>
 <table class="table">
   <thead>
     <th scope="col">#</th>
@@ -13,6 +14,9 @@
       <td>{{ hero.firstName }}</td>
       <td>{{ hero.lastName }}</td>
       <td>{{ hero.place }}</td>
+      <td><button (click)="editHero(hero)" type="button" class="btn btn-secondary">Edit</button></td>
     </tr>
   </tbody>
 </table>
+
+<app-edit-hero [hero]="heroToEdit"></app-edit-hero>
